@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProyectoFiaProgra1</title>
+	
+	<link rel="stylesheet" href="~/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<link rel="stylesshet" href="~/css/fontello.css">
+	<link rel="stylesheet" href="~/css/estilos3.css">
+
+	
+
+
+    
+</head>
+<body>
+    
+    <header>
+		
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">PrimerAvance</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">Galeria</a></li>
+					<li><a asp-area="" asp-controller="Home" asp-action="About">Clientes</a></li>
+					<li><a asp-area="" asp-controller="Servicios" asp-action="Tipo">Servicios</a></li>
+                    <li><a asp-area="" asp-controller="Pagos" asp-action="Solicitud">Carrito</a></li>
+					<li><a asp-area="" asp-controller="Home" asp-action="Contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+			
+			
+		</div>
+	</header>
+
+
+	
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="text-center bg-badge py-3 border-top">
+			<div class="container">
+			<div class="row text-light">
+				<div class="col-auto col-md-8">
+					<p>Contáctenos</p>
+					<p>Dirección: Rio chincha 182 - San Luis - Lima</p>	
+					<p>Celular: 955-129743</p>
+					<p>Fijo: 325-1192</p>
+					<hr>
+					<p>Horario De Atencion</p>
+					<p>De lunes a sábado de 8:00 am a 6:30 pm. La atención a domicilio se realizará previa cita a </p>
+					<p>nuestro correo contacto@carwash.com</p>
+					
+
+				</div>
+				<div class="col-auto col-md-4">
+				<p>¡Las Mejores Soluciones las encuentras aqui!</p>
+				<p class="text-text-muted">Copyright © 2018 </p>
+				<p>Todos los derechos reservados</p>
+				<p class="text-text-muted">	Desarrollado por la plataforma FIA-CARWASH-PROGRAI</p>
+				<p>!Somos tu mejor Opcion</p>
+				<p>&copy; 2018 - ProyectoFiaProgra1</p>
+				</div>
+
+			</div>	
+
+			</div>
+			
+            
+		</footer>
+	</div>
+
+
+	<script src="~/js/jquery-3.3.1.min.js"></script>
+	<script src="~/js/popper.min.js"></script>
+	<script src="~/js/bootstrap.min.js"></script>
+	<script src="~/js/all.js"></script>
+	<script src="~/js/scripts.js"></script>
+  
+</body>
+</html>
