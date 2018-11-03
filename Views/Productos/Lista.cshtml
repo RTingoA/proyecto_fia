@@ -1,0 +1,8 @@
+@model List<Producto>
+
+<h1>Listado de productos</h1>
+
+@foreach(var p in Model) {
+    <h2><a href="~/productos/ver/@p.Id">@p.Nombre</a></h2>
+    <img src="@p.Foto" width="200" />
+}
