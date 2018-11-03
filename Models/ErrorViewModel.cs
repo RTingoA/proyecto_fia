@@ -1,6 +1,6 @@
 using System;
 
-namespace ProyectoFiaProgra1.Models
+namespace Proyecto_Fia.Models
 {
     public class ErrorViewModel
     {
