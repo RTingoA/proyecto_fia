@@ -1,0 +1,26 @@
+@model Empleado
+
+<h1>Formulario de registro de empleado</h1>
+
+<form asp-action="empleado" method="post">
+
+    @Html.ValidationSummary()
+
+    <div class="form-group">
+        <label asp-for="Nombres"></label>
+        <input asp-for="Nombres" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Apellidos"></label>
+        <input asp-for="Apellidos" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Sucursal"></label>
+        <select asp-for="SucursalId" asp-items="ViewBag.Sucursales" class="form-control"></select>
+    </div>
+
+    <button type="submit">Registrar empleado</button>
+
+</form>
