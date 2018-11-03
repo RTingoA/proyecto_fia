@@ -1,0 +1,30 @@
+@model List<Empleado>
+@{
+    var empleados = Model;
+}
+
+<h1>Listado de Empleados</h1>
+
+<form asp-action="empleados" method="GET">
+    <input type="text" name="buscar" class="form-control" value="@ViewBag.buscar">
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Sucursal</th>
+    </tr>
+
+    @foreach (var e in empleados)
+    {
+        <tr>
+            <td>@e.Id</td>
+            <td>@e.Nombres</td>
+            <td>@e.Apellidos</td>
+            <td>@e.Sucursal.Nombre</td>
+        </tr>
+    }
+</table>
