@@ -1,0 +1,20 @@
+@model Mensaje
+
+<h1>Formulario de contacto</h1>
+
+@Html.ValidationSummary()
+
+<form asp-action="contacto" method="post">
+    <div>
+        Nombre: <input asp-for="Nombre" />
+    </div>
+    <div>
+        Correo: <input asp-for="Correo" />
+    </div>
+    <div>
+        Texto: <textarea asp-for="Texto"></textarea>
+    </div>
+    <div>
+        <button type="submit">Enviar</button>
+    </div>
+</form>
