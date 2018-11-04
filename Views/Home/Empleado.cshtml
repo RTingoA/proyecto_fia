@@ -1,6 +1,7 @@
 @model Empleado
 
-<h1>Formulario de registro de empleado</h1>
+
+<h1>Formulario de registro - CLIENTE </h1>
 
 <form asp-action="empleado" method="post">
 
@@ -21,6 +22,37 @@
         <select asp-for="SucursalId" asp-items="ViewBag.Sucursales" class="form-control"></select>
     </div>
 
-    <button type="submit">Registrar empleado</button>
+    <button type="submit">Registrar Cliente</button>
 
 </form>
+
+ <div class="row acerca-de align-items-center">
+                <div class="col-12 col-lg-4 foto">
+                    <img src="~/images/gal9.jpg" class="rounded-circle img-fluid" alt="">
+                    <p class="nombre">TE BRINDAMOS EL MEJOR SERVICIO</p>
+                </div>
+                <div class="col-12 col-lg-8 info">
+                    <h2 class="titulo">Nuestros Clientes</h2>
+                    <p class="resumen">Una Grata sorpresa, haber caido de causalidad en esta grandiosa empresa
+                        , excelente servicio de brillo extremo, reparacion y pintado de aros, cambio de asientos
+                        de cuero. Cumplen en el tiempo Pactado, entregan comprobante de pago y lo mas importante, 
+                        el servicio es de altisima calidad.</p>
+
+                    <p class="label">PINTADO</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:95%;">95%</div>
+                    </div>
+
+                    <p class="label">TIEMPO DE ENTREGA</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%;">100%</div>
+                    </div>
+
+                    <p class="label">PRECIO</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:85%;">85%</div>
+
+					</div>
+				</div>
+
+

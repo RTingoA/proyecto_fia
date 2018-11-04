@@ -3,10 +3,11 @@
     var empleados = Model;
 }
 
-<h1>Listado de Empleados</h1>
+<h1>Listado de Clientes</h1>
 
 <form asp-action="empleados" method="GET">
     <input type="text" name="buscar" class="form-control" value="@ViewBag.buscar">
+    <hr>
     <button type="submit" class="btn btn-primary">Buscar</button>
 </form>
 
