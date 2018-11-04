@@ -55,23 +55,37 @@ namespace Proyecto_Fia.Migrations
                     b.ToTable("Empleados");
                 });
 
-            modelBuilder.Entity("Proyecto_Fia.Models.Mensaje", b =>
+            modelBuilder.Entity("Proyecto_Fia.Models.Mensa", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Apellido")
+                        .IsRequired();
+
+                    b.Property<string>("Celular")
+                        .IsRequired()
+                        .HasMaxLength(9);
+
+                    b.Property<string>("Correo")
+                        .IsRequired();
+
+                    b.Property<string>("Direccion")
+                        .IsRequired();
+
+                    b.Property<string>("Dni")
+                        .IsRequired()
+                        .HasMaxLength(8);
 
                     b.Property<string>("Nombre")
                         .IsRequired();
 
                     b.Property<string>("Texto");
 
-                    b.Property<string>("correo")
-                        .IsRequired();
-
                     b.HasKey("Id");
 
-                    b.ToTable("Mensajes");
+                    b.ToTable("Mensas");
                 });
 
             modelBuilder.Entity("Proyecto_Fia.Models.Producto", b =>

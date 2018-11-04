@@ -15,9 +15,6 @@ namespace Proyecto_Fia.Models{
         public string Nombre { get; set; }
 
         public string Texto { get; set; }    
-
-        public string texto{get;set;}
-
         
 
     }
