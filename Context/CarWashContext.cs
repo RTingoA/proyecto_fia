@@ -39,7 +39,7 @@ namespace Proyecto_Fia.Context
 
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-        public DbSet<Mensaje> Mensajes { get; set; }
+        public DbSet<Mensa> Mensas { get; set; }
         public DbSet<Empleado> Empleados { get; set; }
         public DbSet<Sucursal> Sucursales { get; set; }
     }
