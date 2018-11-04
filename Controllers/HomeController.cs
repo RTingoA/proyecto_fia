@@ -20,15 +20,15 @@ namespace Proyecto_Fia.Controllers
             this._context = _context;
         }
 
-         #region Contacto
+         #region Contact
 
-        public IActionResult Contacto()
+        public IActionResult Contact()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Contacto(Mensaje m)
+        public IActionResult Contact(Mensa m)
         {
             if (ModelState.IsValid)
             {                
@@ -109,12 +109,7 @@ namespace Proyecto_Fia.Controllers
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
+      
 
         public IActionResult Privacy()
         {
