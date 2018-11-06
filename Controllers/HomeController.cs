@@ -20,15 +20,15 @@ namespace Proyecto_Fia.Controllers
             this._context = _context;
         }
 
-         #region Contact
+         #region Contacto
 
-        public IActionResult Contact()
+        public IActionResult Contacto()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Contact(Mensa m)
+        public IActionResult Contacto(Mensa m)
         {
             if (ModelState.IsValid)
             {                
