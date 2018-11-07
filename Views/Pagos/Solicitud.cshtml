@@ -16,47 +16,38 @@
 		<div class="row">
 			<div class="col-12 col-md-8 order-2 order-md-1">
 				<h4 class="mb-3">Direccion de Envio</h4>
-				<form action="">
+				<form action="Solicitud" method="post">
 					<div class="row">
 						<div class="col-12 col-sm-6 mb-3">
 							<label for="nombre">Nombre</label>
-							<input type="text" class="form-control" id="nombre" name="nombre">
+							<input type="text" class="form-control" id="nombre" name="Nombre">
 						</div>
 						<div class="col-12 col-sm-6 mb-3">
 							<label for="apellido">Apellido</label>
-							<input type="text" class="form-control" id="apellido" name="apellido">
+							<input type="text" class="form-control" id="apellido" name="Apellido">
 						</div>
 					</div>
 
-					<div class="mb-3">
-						<label for="usuario">Usuario</label>
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text">-</span>
-							</div>
-							<input type="text" id="usuario" class="form-control" placeholder="Usuario" name="usuario">
-						</div>
-					</div>
 
 					<div class="mb-3">
 						<label for="correo">Correo <span class="text-muted">Opcional</span></label>
-						<input type="email" class="form-control" placeholder="nombre@correo.com" name="correo">
+						<input type="email" class="form-control" placeholder="nombre@correo.com" name="Correo">
 					</div>
 
 					<div class="mb-3">
 						<label for="direccion">Direccion</label>
-						<input type="text" class="form-control" placeholder="1234 Calle Principal" name="direccion">
+						<input type="text" class="form-control" placeholder="1234 Calle Principal" name="Direccion">
 					</div>
 
 					<div class="mb-3">
 						<label for="direccion2">Direccion 2</label>
-						<input type="text" class="form-control" placeholder="Interior o informacion adicional" name="direccion2">
+						<input type="text" class="form-control" placeholder="Interior o informacion adicional" name="Direccion2">
 					</div>
 
 					<div class="row">
 						<div class="col-12 col-sm-4 mb-3">
-							<label for="pais">Distrito</label>
-							<select name="pais" id="pais" class="custom-select d-block w-100">
+							<label for="distrito">Distrito</label>
+							<select name="Distrito" id="distrito" class="custom-select d-block w-100">
 								<option value="">Seleccionar Distrito</option>
 								<option value="Lima">Lima</option>
 								<option value="La Victoria">La Victoria</option>
@@ -65,15 +56,15 @@
 							</select>
 						</div>
 						<div class="col-12 col-sm-4 mb-3">
-							<label for="estado">Calle</label>
-							<select name="estado" id="estado" class="custom-select d-block w-100">
+							<label for="calle">Calle</label>
+							<select name="Calle" id="calle" class="custom-select d-block w-100">
 								<option value="">Seleccionar Calle</option>
 								<option value="">-</option>
 							</select>
 						</div>
 						<div class="col-12 col-sm-4 mb-3">
-							<label for="codigo-postal">Codigo Postal</label>
-							<input type="text" id="codigo-postal" class="form-control">
+							<label for="codigoPostal">Codigo Postal</label>
+							<input type="text" id="codigoPostal" class="form-control" name="CodigoPostal">
 						</div>
 					</div>
 
@@ -91,40 +82,41 @@
 
 					<hr class="mb-4">
 					<div class="d-block mb-3">
-						<div class="custom-control custom-radio">
-							<input type="radio" name="metodo-pago" id="tarjeta-credito" class="custom-control-input" checked>
-							<label for="tarjeta-credito" class="custom-control-label">Tarjeta de Credito</label>
+						
+						<div class="col-12 col-sm-4 mb-3">
+							<label for="tipoTarjeta">Tarjeta de Pago</label>
+							<select name="TipoTarjeta" id="tipoTarjeta" class="custom-select d-block w-100">
+								<option value="">Seleccionar Tarjeta</option>
+								<option value="Visa">Visa</option>
+								<option value="Mastercard">Mastercard</option>
+								<option value="Paypal">Paypal</option>
+							</select>
 						</div>
-						<div class="custom-control custom-radio">
-							<input type="radio" name="metodo-pago" id="tarjeta-debito" class="custom-control-input">
-							<label for="tarjeta-debito" class="custom-control-label">Tarjeta de Debito</label>
-						</div>
-						<div class="custom-control custom-radio">
-							<input type="radio" name="metodo-pago" id="paypal" class="custom-control-input">
-							<label for="paypal" class="custom-control-label">Paypal</label>
-						</div>
+						
+
+
 					</div>
 
 					<div class="row">
 						<div class="col-12 col-sm-6 mb-3">
-							<label for="nombre-tarjeta">Nombre en la tarjeta</label>
-							<input type="text" id="nombre-tarjeta" class="form-control">
+							<label for="nombreTitular">Nombre del Titular de la tarjeta</label>
+							<input type="text" id="nombreTitular" class="form-control" name="NombreTitular">
 							<small class="text-muted">Nombre completo como se muestra en la tarjeta</small>
 						</div>
 						<div class="col-12 col-sm-6 mb-3">
-							<label for="numero-tarjeta">Numero de tarjeta</label>
-							<input type="text" id="numero-tarjeta" class="form-control">
+							<label for="numeroTarjeta">Numero de tarjeta</label>
+							<input type="text" id="numeroTarjeta" class="form-control" name="NumeroTarjeta">
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="col-6 col-sm-4 mb-3">
-							<label for="tarjeta-expiracion">Expiracion</label>
-							<input type="text" id="tarjeta-expiracion" class="form-control">
+							<label for="codigoExpiracion">Expiracion</label>
+							<input type="text" id="codigoExpiracion" class="form-control" name="CodigoExpiracion">
 						</div>
 						<div class="col-6 col-sm-4 mb-3">
-							<label for="tarjeta-ccv">CVV</label>
-							<input type="text" id="tarjeta-ccv" class="form-control">
+							<label for="codigoCvv">CVV</label>
+							<input type="text" id="CodigoCvv" class="form-control" name="CodigoCvv">
 						</div>
 					</div>
 
@@ -135,42 +127,22 @@
 			<div class="col-12 col-md-4 order-1 order-md-2">
 				<h4 class="mb-3 d-flex justify-content-between align-items-center">
 					<span class="text-muted">Tu Carrito</span>
-					<span class="badge badge-secondary badge-pill">3</span>
+					<span class="badge badge-secondary badge-pill">100% Seguro</span>
 				</h4>
-				<ul class="list-group mb-3">
-					<li class="list-group-item d-flex justify-content-between">
-						<div>
-							<h6 class="my-0">Lavado Platinum</h6>
-							<small class="text-muted">Tiempo estimado: 40min</small>
-						</div>
-						<span class="text-muted">S/ 429  </span>
-					</li>
-					<li class="list-group-item d-flex justify-content-between">
-						<div>
-							<h6 class="my-0">Lavado Premium</h6>
-							<small class="text-muted">Tiempo estimado: 50min</small>
-						</div>
-						<span class="text-muted">S/ 279 </span>
-					</li>
-					<li class="list-group-item d-flex justify-content-between">
-						<div>
-							<h6 class="my-0">Lavado Gold</h6>
-							<small class="text-muted">Tiempo estimado: 55min</small>
-						</div>
-						<span class="text-muted">S/ 299 </span>
-					</li>
-					<li class="list-group-item d-flex justify-content-between bg-light">
-						<div class="text-success">
-							<h6 class="my-0">Codigo de descuento</h6>
-							<small class="text-success">CUPON CARWASH</small>
-						</div>
-						<span class="text-success">S/ 50</span>
-					</li>
-					<li class="list-group-item d-flex justify-content-between bg-light">
-						<span>Total S/ </span>
-						<strong>957.00</strong>
-					</li>
-				</ul>
+				
+				<div class="col-12 col-sm-4 mb-3">
+							<label for="tipoServicio">Tipo de Servicio</label>
+							<select name="TipoServicio" id="tipoServicio" class="custom-select d-block w-150">
+								<option value="">Seleccionar</option>
+								<option value="LavadoPremium">Lavado Premium</option>
+								<option value="LavadoGold">Lavado Gold</option>
+								<option value="LavadoVip">Lavado Vip</option>
+							</select>
+				</div>
+						
+
+
+
 				<form action="" class="card p-2">
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="Cupon">
