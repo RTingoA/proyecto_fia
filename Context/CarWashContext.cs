@@ -67,5 +67,8 @@ namespace Proyecto_Fia.Context
         public DbSet<Sucursal> Sucursales { get; set; }
 
         public DbSet<TipoTarjeta> TipoTarjetas { get; set; }    
+
+        public DbSet<MensajePago> MensajePagos{get;set;}
+
     }
 }

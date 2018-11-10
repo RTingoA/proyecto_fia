@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Proyecto_Fia.Context;
 
 namespace Proyecto_Fia.Migrations
 {
     [DbContext(typeof(CarWashContext))]
-    partial class CarWashContextModelSnapshot : ModelSnapshot
+    [Migration("20181110042819_segund")]
+    partial class segund
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,8 +99,6 @@ namespace Proyecto_Fia.Migrations
                     b.Property<string>("Apellido")
                         .IsRequired()
                         .HasMaxLength(20);
-
-                    b.Property<string>("Calle");
 
                     b.Property<string>("CodigoCvv")
                         .IsRequired()
