@@ -3,7 +3,7 @@
     var empleados = Model;
 }
 
-<h1>Listado de Clientes</h1>
+<h1 class="text-primary">Listado de Empleados</h1>
 
 <form asp-action="empleados" method="GET">
     <input type="text" name="buscar" class="form-control" value="@ViewBag.buscar">
@@ -11,7 +11,11 @@
     <button type="submit" class="btn btn-primary">Buscar</button>
 </form>
 
-<table class="table">
+<hr>
+
+
+
+<table class="table table-hover">
     <tr>
         <th>Id</th>
         <th>Nombres</th>
@@ -26,6 +30,20 @@
             <td>@e.Nombres</td>
             <td>@e.Apellidos</td>
             <td>@e.Sucursal.Nombre</td>
+
+        <td>
+           
+            @Html.ActionLink("Detalles","Detail", new{id=e.Id})
+            
+        </td>
+
         </tr>
     }
+
+    <td>
+           
+            @Html.ActionLink("Regresar","Empleado")
+            
+        </td>
+
 </table>
