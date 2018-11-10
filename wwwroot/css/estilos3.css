@@ -336,3 +336,77 @@ header .menu .c-3:hover { background: #002d44; }
 	background: #fff;
 }
 
+
+.contenedor::-webkit-scrollbar{
+
+	width: 7px;
+
+}
+
+
+.contenedor::-webkit-scrollbar-thumb{
+
+	background: blue;
+	border-radius: 5px;
+
+}
+
+
+
+
+.ir-arriba {
+	display:none;
+	padding:10px;
+	color: #0d47a1;
+	font-size:150px;
+	
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+	.social ul {
+		list-style: none;
+	}
+ 
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		width: 80px;
+		padding: 20px ;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+		font-size: 40px;
+	}
+
+
+	
+	.social ul li .uno {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .dos {background: #00abf0;}
+	.social ul li .tres {background: #d95232;}
+	.social ul li .cuatro {background: #666666;}
+
+
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+
+ 
+	
+
+
+
