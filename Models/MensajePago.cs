@@ -35,11 +35,11 @@ namespace Proyecto_Fia.Models{
         public string  Calle { get; set; }
 
         [MaxLength(10)]
-        [Required]
+        
         public string CodigoPostal { get; set; }
 
         
-        [Required]
+      
         public string TipoTarjeta { get; set; }
 
         [MaxLength(20)]

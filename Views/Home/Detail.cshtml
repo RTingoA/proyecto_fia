@@ -1,0 +1,48 @@
+@model Proyecto_Fia.Models.Empleado
+
+@{
+    ViewBag.Title  ="Detalles";
+}
+
+<h2>Detalles</h2>
+
+<fieldset>
+    <legend>Empleado</legend>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Nombres);
+    </div>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nombres);
+    </div>
+
+     <div class="display-label">
+        @Html.DisplayNameFor(model => model.Apellidos);
+    </div>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Apellidos);
+    </div>
+
+     <div class="display-label">
+        @Html.DisplayNameFor(model => model.Sucursal.Nombre);
+    </div>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sucursal.Nombre);
+    </div>
+
+    <hr>
+
+    <td>
+            @Html.ActionLink("Editar","Edit", new{id=Model.Id})
+            @Html.ActionLink("Regresar","Empleados")
+            
+            
+        </td>
+
+    
+
+
+
+</fieldset>

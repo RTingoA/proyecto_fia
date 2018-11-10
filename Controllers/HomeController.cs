@@ -47,10 +47,23 @@ namespace Proyecto_Fia.Controllers
             return View();
         }
 
+
+
         #endregion
+
+         public IActionResult Contactos() {
+
+
+                return View(_context.Mensas.ToList());
+
+            
+        }
+
+
 
         #region Empleados
 
+       
         public IActionResult Empleados(string buscar) {
 
             var empleados = _context.Empleados.Include(e => e.Sucursal).AsQueryable();
@@ -97,6 +110,24 @@ namespace Proyecto_Fia.Controllers
 
         #endregion
 
+
+
+        public ActionResult Detail(int id = 0){
+
+            Empleado emp = _context.Empleados.Find(id);
+            if(emp == null)
+            {
+                return HttpNotFound();
+            }
+            return View(emp);
+        }
+
+
+
+        private ActionResult HttpNotFound()
+        {
+            throw new NotImplementedException();
+        }
 
 
         public IActionResult Index()

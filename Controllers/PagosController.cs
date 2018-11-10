@@ -14,7 +14,8 @@ namespace ProyectoFiaProgra1 . Controllers
 
     public class PagosController : Controller
     {
-      
+
+     
     private readonly CarWashContext _context;
 
     public PagosController(CarWashContext _context){
@@ -23,6 +24,7 @@ namespace ProyectoFiaProgra1 . Controllers
 
         public IActionResult Solicitud()
         {
+            PreCargaDeDatos();
             return View();
         }
 
@@ -36,7 +38,7 @@ namespace ProyectoFiaProgra1 . Controllers
 
                 return RedirectToAction("Validando");
             }
-
+            PreCargaDeDatos();
             return View(m);
         }
         public IActionResult Validando()
@@ -45,6 +47,38 @@ namespace ProyectoFiaProgra1 . Controllers
         }
 
 
+        private void PreCargaDeDatos() {
+            ViewBag.MensajePagos = new SelectList(_context.MensajePagos, "Id", "Nombre");
+        }
+
+
+
+
+         public IActionResult Solicitudes() {
+
+
+                return View(_context.MensajePagos.ToList());
+
+            
+        }
+
+
+
+        public IActionResult Detalles(int id = 0) {
+
+            MensajePago m = _context.MensajePagos.Find(id);
+            if(m == null){
+                return HttpNotFound();
+
+            }  
+
+            return View(m);
+        }
+
+        private IActionResult HttpNotFound()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

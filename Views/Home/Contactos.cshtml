@@ -1,0 +1,49 @@
+@model List<Mensa>
+@{
+    var mensa = Model;
+}
+
+<h1 class="text-primary">Listado de formulario - Contacto </h1>
+
+
+
+<hr>
+<hr>
+
+<table class="table table-hover ">
+    <tr>
+        <th>Id</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Correo</th>
+        <th>Celular</th>
+        <th>Direccion</th>
+        <th>Texto</th>
+    </tr>
+
+    @foreach (var e in mensa)
+    {
+        <tr>
+            <td>@e.Id</td>
+            <td>@e.Nombre</td>
+            <td>@e.Apellido</td>
+            <td>@e.Correo</td>
+            <td>@e.Celular</td>
+            <td>@e.Direccion</td>
+            <td>@e.Texto</td>
+            
+            
+
+        
+
+        </tr>
+        
+        
+    }
+
+    <td>
+           
+            @Html.ActionLink("Regresar","Contacto")
+            
+        </td>
+</table>
