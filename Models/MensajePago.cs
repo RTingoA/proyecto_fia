@@ -31,8 +31,7 @@ namespace Proyecto_Fia.Models{
         [Required]
         public string Distrito { get; set; }
 
-        [MaxLength(30)]
-        [Required]
+        
         public string  Calle { get; set; }
 
         [MaxLength(10)]
@@ -64,41 +63,10 @@ namespace Proyecto_Fia.Models{
         [Required]
         public string TipoServicio { get; set; }
 
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         
     }
 
+    
 
 
 
