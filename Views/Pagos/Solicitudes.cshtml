@@ -1,0 +1,49 @@
+@model List<MensajePago>
+@{
+    var mensajepago = Model;
+}
+
+<h1 class="text-primary">Listado de Clientes - Pago</h1>
+
+<hr>
+<hr>
+
+<table class="table table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>Direccion</th>
+        <th>Direccion 2</th>
+        <th>Distrito</th>
+        <th>Tipo de Servicio</th>
+        <th>Tarjeta de Pago</th>
+        
+    </tr>
+
+    @foreach (var e in mensajepago)
+    {
+        <tr>
+            <td>@e.Id</td>
+            <td>@e.Nombre</td>
+            <td>@e.Apellido</td>
+            <td>@e.Correo</td>
+            <td>@e.Direccion</td>
+            <td>@e.DireccionTwo</td>
+            <td>@e.Distrito</td>
+            <td>@e.TipoServicio</td>
+            <td>@e.NumeroTarjeta</td>
+
+        </tr>
+    }
+
+    
+        <td>
+           
+            @Html.ActionLink("Regresar","Solicitud")
+            
+        </td>
+
+      
+</table>
